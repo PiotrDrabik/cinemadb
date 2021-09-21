@@ -1,0 +1,10 @@
+<div *ngIf="alertService.listAlerts.length > 0" class="toast-container alert-position">
+    <div *ngFor="let item of alertService.listAlerts" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">{{item.title}}</strong>
+        </div>
+        <div class="toast-body">
+            {{item.message}}
+        </div>
+    </div>
+</div>
