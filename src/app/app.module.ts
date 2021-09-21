@@ -9,7 +9,7 @@ import { MaterialModule } from './material-module';
 import { MoviesComponent } from './pages/movies/movies.component';
 import { SeriesComponent } from './pages/series/series.component';
 import { PeopleComponent } from './pages/people/people.component';
-import { MembersComponent } from './members/members.component';
+import { MembersComponent } from './pages/members/members.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { AlertHelperComponent } from './resources/alert-helper/alert-helper.component';

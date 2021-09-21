@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {MoviesComponent} from "./pages/movies/movies.component";
 import {PeopleComponent} from "./pages/people/people.component";
 import {SeriesComponent} from "./pages/series/series.component";
-import {MembersComponent} from "./members/members.component";
+import {MembersComponent} from "./pages/members/members.component";
 import {AuthGuardService} from "./services/auth-guard.service";
 import {HomeComponent} from "./home/home.component";
 import {ErrorPageComponent} from "./pages/error-page/error-page.component";
