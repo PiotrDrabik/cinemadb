@@ -12,7 +12,7 @@ import { PeopleComponent } from './pages/people/people.component';
 import { MembersComponent } from './members/members.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
-import { AlertHelperComponent } from './alert-helper/alert-helper.component';
+import { AlertHelperComponent } from './resources/alert-helper/alert-helper.component';
 
 @NgModule({
     declarations: [
