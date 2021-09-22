@@ -1,10 +1,13 @@
 export interface Home {
+    adult?: boolean
     backdrop_path: string
-    first_air_date: string
+    first_air_date?: string
     genre_ids: number[]
     id: number
     media_type: string
-    name: string
+    name?: string
+    title?: string
+    release_date?: string
     origin_country: string[]
     original_language: string
     original_name: string
