@@ -1,0 +1,12 @@
+{
+    "nav": {
+        "home": "Start",
+        "movies": "Filmy",
+        "series": "Seriale",
+        "people": "Ludzie",
+        "members": "Użytkownicy",
+        "search-action": {
+            "title": "Szukaj"
+        }
+    }
+}

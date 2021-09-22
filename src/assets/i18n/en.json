@@ -1,0 +1,15 @@
+{
+    "nav": {
+        "home": "Home",
+        "movies": "Movies",
+        "series": "Series",
+        "people": "People",
+        "members": "Members",
+        "search-action": {
+            "title": "Search"
+        }
+    },
+    "home": {
+        "premiere": "Premiere"
+    }
+}
