@@ -12,7 +12,7 @@ describe('Languages constants', () => {
     });
 
     it('should return string', () => {
-        expect(languages.US).toBe('en-EN');
+        expect(languages.EN).toBe('en-EN');
     });
 
     it('should return string', () => {
