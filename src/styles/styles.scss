@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// overwrite bootstrap5 style
+.carousel-dark .carousel-indicators [data-bs-target] {
+    background-color: white;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: 5%;
+    & > .carousel-control-next-icon, & > .carousel-control-prev-icon {
+        filter: unset;
+    }
+}
+
+@import url(./colors.scss);
