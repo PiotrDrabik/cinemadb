@@ -8,5 +8,18 @@
         "search-action": {
             "title": "Szukaj"
         }
+    },
+    "global": {
+
+    },
+    "error": {
+        "response": "Przepraszamy, nie znaleziono żadnego wyniku.",
+        "404": "Błąd 404, strona nie została znaleziona."
+    },
+    "home": {
+        "premiere": "Premiera"
+    },
+    "search": {
+        "items-per-page-label": "Pozycji"
     }
 }

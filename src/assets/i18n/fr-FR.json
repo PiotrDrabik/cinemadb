@@ -8,5 +8,18 @@
         "search-action": {
             "title": "Chercher"
         }
+    },
+    "global": {
+
+    },
+    "error": {
+        "response": "Désolé, pas trouvé de résultats.",
+        "404": "Erreur 404, page introuvable."
+    },
+    "home": {
+        "premiere": "Première"
+    },
+    "search": {
+        "items-per-page-label": "Éléments"
     }
 }

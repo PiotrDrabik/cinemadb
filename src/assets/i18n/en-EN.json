@@ -9,6 +9,13 @@
             "title": "Search"
         }
     },
+    "global": {
+
+    },
+    "error": {
+        "response": "Sorry, no results found.",
+        "404": "404 error, page not found."
+    },
     "home": {
         "premiere": "Premiere"
     }

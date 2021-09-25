@@ -8,5 +8,18 @@
         "search-action": {
             "title": "Suche"
         }
+    },
+    "global": {
+
+    },
+    "error": {
+        "response": "Leider keine Ergebnisse gefunden.",
+        "404": "404-Fehler, Seite nicht gefunden."
+    },
+    "home": {
+        "premiere": "Premiere"
+    },
+    "search": {
+        "items-per-page-label": "Produkte"
     }
 }
