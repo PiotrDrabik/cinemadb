@@ -19,7 +19,10 @@
     "home": {
         "premiere": "Premiera"
     },
-    "search": {
-        "items-per-page-label": "Pozycji"
+    "paginator": {
+        "items-per-page": "Pozycji",
+        "next-page": "Następna",
+        "previous-page": "Poprzednia",
+        "of": "z"
     }
 }

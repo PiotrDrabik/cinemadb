@@ -19,7 +19,10 @@
     "home": {
         "premiere": "Première"
     },
-    "search": {
-        "items-per-page-label": "Éléments"
+    "paginator": {
+        "items-per-page": "Éléments",
+        "next-page": "Page suivante",
+        "previous-page": "Page précédente",
+        "of": "sur"
     }
 }

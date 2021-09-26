@@ -18,5 +18,12 @@
     },
     "home": {
         "premiere": "Premiere"
+    },
+    "paginator": {
+        "items-per-page": "Items per page",
+        "next-page": "Next page",
+        "previous-page": "Previous page",
+        "of": "of"
     }
 }
+

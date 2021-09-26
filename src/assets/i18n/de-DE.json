@@ -19,7 +19,10 @@
     "home": {
         "premiere": "Premiere"
     },
-    "search": {
-        "items-per-page-label": "Produkte"
+    "paginator": {
+        "items-per-page": "Produkte",
+        "next-page": "Nächste Seite",
+        "previous-page": "Vorherige Seite",
+        "of": "von"
     }
 }
