@@ -1,18 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+$fa-font-path: '../../node_modules/@fortawesome/fontawesome-free/webfonts';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import './colors.scss';
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: $body-bg;
+}
 
 // overwrite bootstrap5 style
 .carousel-dark .carousel-indicators [data-bs-target] {
-    background-color: white;
+    background-color: $white;
 }
 
 .carousel-control-next, .carousel-control-prev {
     width: 5%;
     & > .carousel-control-next-icon, & > .carousel-control-prev-icon {
-        filter: unset;
+        filter: opacity(0.3);
     }
 }
-
-@import url(./colors.scss);
