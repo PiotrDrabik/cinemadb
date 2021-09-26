@@ -29,7 +29,7 @@ describe('AppConfigService', () => {
 
     it('contentLanguage should have default value', () => {
         let language = new Languages();
-        expect(service.contentLanguage).toEqual(language.US);
+        expect(service.contentLanguage).toEqual(language.EN);
     });
 
     it('activeFlag should be changed', () => {
