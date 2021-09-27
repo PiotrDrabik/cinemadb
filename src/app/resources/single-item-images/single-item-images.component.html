@@ -1,0 +1,64 @@
+<ng-container *ngIf="item">
+    <div class="title h4">
+        <div class="py-2">{{item.name || item.title || item.original_name}}</div>
+    </div>
+
+    <!-- image poster and loading spinner -->
+    <img *ngIf="item.poster_path || item.profile_path"
+         src="https://image.tmdb.org/t/p/w500/{{item.poster_path || item.profile_path}}"
+         loading="lazy"
+         (load)="loadCompleted({poster: true})"
+         [hidden]="posterLoaded"
+         class="d-block w-100"
+         alt="{{item.name || item.title || item.original_name}}">
+    <mat-spinner
+        *ngIf="!posterLoaded && item.poster_path"
+        class="d-block my-5 ms-2"
+        diameter="40">
+    </mat-spinner>
+
+    <!-- image backdrop and spinner -->
+    <div *ngIf="item.backdrop_path || item.media_type"
+         class="bottom-area"
+         [ngClass]="!item.poster_path && !item.profile_path ? 'extra-top-shift' : ''" >
+
+        <img *ngIf="item.backdrop_path"
+             src="https://image.tmdb.org/t/p/w500/{{item.backdrop_path}}"
+             class="d-block ms-1 hover-anim"
+             [ngClass]="backdropLoaded ? 'additional-image' : ''"
+             loading="lazy"
+             (load)="loadCompleted({backdrop: true})"
+             [hidden]="backdropLoaded"
+             alt="{{item.name || item.title || item.original_name}}">
+
+        <mat-spinner
+            class="d-block ms-1 p-4 additional-image"
+            diameter="20"
+            *ngIf="!backdropLoaded && item.backdrop_path"></mat-spinner>
+
+        <!-- icons movie, tv or person -->
+        <i *ngIf="item.media_type === 'movie'"
+           class="fas fa-film icon-item-type movie"
+           title="{{ 'nav.movies' | translate }}"></i>
+        <i *ngIf="item.media_type === 'tv'"
+           class="fas fa-tv fa-2x icon-item-type"
+           title="{{ 'nav.series' | translate }}"></i>
+        <i *ngIf="item.media_type === 'person'"
+           class="fas fa-user fa-2x icon-item-type"
+           title="{{ 'nav.people' | translate }}"></i>
+
+        <!-- overview -->
+        <div *ngIf="item.overview"
+             class="text-start p-3 w-100 overview-bg">
+            <span>{{item.overview | stringCut: 150 }}</span>
+        </div>
+    </div>
+
+    <!-- release date -->
+    <div *ngIf="item.release_date || item.first_air_date"
+         class="pb-4 date-box"
+         [ngClass]="!item.poster_path ? 'extra-top-space' : ''">
+        <i class="far fa-calendar-alt pe-2"></i>
+        <span>{{item.release_date || item.first_air_date | date:'yyyy'}}</span>
+    </div>
+</ng-container>

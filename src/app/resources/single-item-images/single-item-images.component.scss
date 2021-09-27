@@ -1,0 +1,70 @@
+@import '../../../styles/colors.scss';
+
+.title {
+    top: 2%;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: -webkit-center;
+    text-align: center;
+    text-align: -moz-center;
+    background-color: $white-50-opacity;
+}
+
+.bottom-area {
+    top: -3%;
+    position: relative;
+    text-align: end;
+    &.extra-top-shift {
+        top: 3%;
+    }
+}
+
+.additional-image {
+    top: -3%;
+    position: relative;
+    border: 1px $white solid;
+    box-shadow: $light-grey 5px 5px 5px;
+    float: left;
+    width: 50%;
+}
+
+.icon-item-type {
+    float: right;
+    border: 2px solid $white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: $media-type-icon-bg;
+    color: $media-type-icon;
+    margin-right: 2px;
+    padding: 6px;
+    &.movie {
+        font-size: 2.6em;
+        padding: 2px 6px;
+    }
+}
+
+.overview-bg {
+    background-color: $black-50-opacity;
+    color: $white;
+    margin-top: 20px;
+    float: left;
+}
+
+.date-box {
+    float:right;
+    font-size: 18px;
+    text-align: right;
+    width: 100%;
+    &.extra-top-space {
+        padding-top: 30px;
+    }
+}
+
+.hover-anim {
+    transition: all .2s ease-in-out;
+    &:hover {
+        transform: scale(1.5);
+    }
+}
