@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {MoviesComponent} from "./pages/movies/movies.component";
-import {PeopleComponent} from "./pages/people/people.component";
-import {SeriesComponent} from "./pages/series/series.component";
-import {MembersComponent} from "./pages/members/members.component";
-import {AuthGuardService} from "./services/auth-guard.service";
-import {HomeComponent} from "./home/home.component";
-import {ErrorPageComponent} from "./pages/error-page/error-page.component";
-
+import { MoviesComponent } from "./pages/movies/movies.component";
+import { PeopleComponent } from "./pages/people/people.component";
+import { SeriesComponent } from "./pages/series/series.component";
+import { MembersComponent } from "./pages/members/members.component";
+import { AuthGuardService } from "./services/auth-guard.service";
+import { HomeComponent } from "./home/home.component";
+import { ErrorPageComponent } from "./pages/error-page/error-page.component";
+import { SearchComponent } from "./pages/search/search.component";
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -15,6 +15,7 @@ const routes: Routes = [
     { path: 'people', component: PeopleComponent },
     { path: 'series', component: SeriesComponent },
     { path: 'members', component: MembersComponent, canActivate: [AuthGuardService] },
+    { path: 'search/:param', component: SearchComponent },
     { path: '404', component: ErrorPageComponent, data: {message: 'Page not found!'} },
     { path: '**', redirectTo: '/404' }
 ];
