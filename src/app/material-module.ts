@@ -1,5 +1,6 @@
-import {NgModule} from '@angular/core';
-import {MatPaginatorModule} from '@angular/material/paginator';
+import { NgModule } from '@angular/core';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 /* -- Uncomment used modules --
 import {A11yModule} from '@angular/cdk/a11y';
@@ -30,7 +31,6 @@ import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -47,7 +47,9 @@ import {OverlayModule} from '@angular/cdk/overlay';*/
 
 @NgModule({
     exports: [
-        MatPaginatorModule
+        MatPaginatorModule,
+        MatProgressSpinnerModule
+
         /* -- Uncomment used modules --
         A11yModule,
         ClipboardModule,
@@ -75,7 +77,6 @@ import {OverlayModule} from '@angular/cdk/overlay';*/
         MatMenuModule,
         MatNativeDateModule,
         MatProgressBarModule,
-        MatProgressSpinnerModule,
         MatRadioModule,
         MatRippleModule,
         MatSelectModule,
