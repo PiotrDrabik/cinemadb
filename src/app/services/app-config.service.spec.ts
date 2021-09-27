@@ -56,7 +56,7 @@ describe('AppConfigService', () => {
 
     it('QUALITY_IMAGE should have at least 2 types', () => {
         expect(typeof service.QUALITY_IMAGE).toEqual('object');
-        expect(Object.keys(service.QUALITY_IMAGE)).toContain('original');
-        expect(Object.keys(service.QUALITY_IMAGE)).toContain('standard');
+        expect(Object.keys(service.QUALITY_IMAGE)).toContain('ORIGINAL');
+        expect(Object.keys(service.QUALITY_IMAGE)).toContain('STANDARD');
     });
 });

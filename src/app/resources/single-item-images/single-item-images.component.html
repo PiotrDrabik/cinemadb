@@ -5,7 +5,7 @@
 
     <!-- image poster and loading spinner -->
     <img *ngIf="item.poster_path || item.profile_path"
-         src="{{app.hostImage}}{{app.QUALITY_IMAGE.standard}}{{item.poster_path || item.profile_path}}"
+         src="{{app.hostImage}}{{app.QUALITY_IMAGE.STANDARD}}{{item.poster_path || item.profile_path}}"
          loading="lazy"
          (load)="loadCompleted({poster: true})"
          [hidden]="posterLoaded"
@@ -23,7 +23,7 @@
          [ngClass]="!item.poster_path && !item.profile_path ? 'extra-top-shift' : ''" >
 
         <img *ngIf="item.backdrop_path"
-             src="{{app.hostImage}}{{app.QUALITY_IMAGE.standard}}{{item.backdrop_path}}"
+             src="{{app.hostImage}}{{app.QUALITY_IMAGE.STANDARD}}{{item.backdrop_path}}"
              class="d-block ms-1 hover-anim"
              [ngClass]="backdropLoaded ? 'additional-image' : ''"
              loading="lazy"
