@@ -10,9 +10,11 @@ export class AppConfigService {
     private flag = 'EN';
     private HOST = 'https://api.themoviedb.org/3/';
     private HOST_IMAGES = 'https://image.tmdb.org/t/p/';
-    public QUALITY_IMAGE = {
-        original: 'original/',
-        standard: 'w500/'
+    private QUALITY_IMAGE_STANDARD = 'w500/';
+    private QUALITY_IMAGE_ORIGINAL = 'original/';
+    public readonly QUALITY_IMAGE = {
+        ORIGINAL: this.QUALITY_IMAGE_ORIGINAL,
+        STANDARD: this.QUALITY_IMAGE_STANDARD
     }
 
     refreshCalled$ = new Subject<boolean>();

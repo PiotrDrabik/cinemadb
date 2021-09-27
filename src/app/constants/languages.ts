@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 /*
- *
+ * constants to use, instance is needed
  */
 const EN = 'en-EN',
     PL = 'pl-PL',

@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Languages } from "./constants/languages";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styles: []
 })
 export class AppComponent {
-  title = 'cinemadb';
+  title = 'CinemaDB';
+    constructor(private translate: TranslateService, private languages: Languages) {
+        translate.setDefaultLang(languages.EN);
+    }
 }
