@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { BaseRes } from "../../models/base-response";
+import { AppConfigService } from "../../services/app-config.service";
 
 @Component({
     selector: 'app-single-item-images',
@@ -11,7 +12,7 @@ export class SingleItemImagesComponent {
     posterLoaded: boolean | undefined;
     backdropLoaded: boolean | undefined;
 
-    constructor() { }
+    constructor(public app: AppConfigService) { }
 
     loadCompleted(image: {poster?: boolean, backdrop?: boolean}) {
         let {poster, backdrop} = image;
