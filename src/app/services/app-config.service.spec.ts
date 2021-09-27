@@ -1,6 +1,5 @@
 import { TestBed } from '@angular/core/testing';
 import { Languages } from "../constants/languages";
-
 import { AppConfigService } from './app-config.service';
 
 describe('AppConfigService', () => {
@@ -13,6 +12,10 @@ describe('AppConfigService', () => {
 
     it('should be created', () => {
         expect(service).toBeTruthy();
+    });
+
+    it('refreshCalled$ should be defined', () => {
+        expect(service.refreshCalled$).toBeDefined();
     });
 
     it('get apiKey should return string', () => {
@@ -39,5 +42,21 @@ describe('AppConfigService', () => {
 
     it('activeFlag should have default value', () => {
         expect(service.activeFlag).toEqual('EN');
+    });
+
+    it('host should be a string and not be empty', () => {
+        expect(typeof service.host).toEqual('string');
+        expect(service.host).not.toEqual('');
+    });
+
+    it('hostImage should be a string and not be empty', () => {
+        expect(typeof service.hostImage).toEqual('string');
+        expect(service.hostImage).not.toEqual('');
+    });
+
+    it('QUALITY_IMAGE should have at least 2 types', () => {
+        expect(typeof service.QUALITY_IMAGE).toEqual('object');
+        expect(Object.keys(service.QUALITY_IMAGE)).toContain('original');
+        expect(Object.keys(service.QUALITY_IMAGE)).toContain('standard');
     });
 });
