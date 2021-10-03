@@ -1,14 +1,14 @@
 export interface CastMediaModel {
     adult: boolean
-    cast_id: number
+    cast_id?: number
     character: string
-    credit_id: string
+    credit_id?: string
     gender: number
     id: number
-    known_for_department: string
+    known_for_department?: string
     name: string
     order: number
-    original_name: string
+    original_name?: string
     popularity: number
     profile_path: string
 }
@@ -49,9 +49,9 @@ export interface NetworkMediaModel {
 }
 
 export interface MediaResponseModel {
-    adult: boolean
+    adult?: boolean
     backdrop_path: string
-    belongs_to_collection: object
+    belongs_to_collection?: object
     budget: number
     first_air_date?: string
     genres: GenresMediaModel[]
@@ -64,22 +64,22 @@ export interface MediaResponseModel {
     networks: NetworkMediaModel[]
     number_of_episodes: number
     number_of_seasons: number
-    original_language: string
+    original_language?: string
     original_title: string
     overview: string
     popularity: number
     poster_path: string
-    production_companies: object[]
-    production_countries: object[]
+    production_companies?: object[]
+    production_countries?: object[]
     release_date: string
     revenue: number
-    runtime: number
+    runtime?: number
     seasons: SeasonsMediaModel[]
     spoken_languages: object[]
-    status: string
+    status?: string
     tagline: string
     title?: string
-    video: boolean
+    video?: boolean
     videos: VideosMediaModel
     vote_average: number
 }
