@@ -20,3 +20,28 @@ body {
         filter: opacity(0.3);
     }
 }
+
+.subpage-header {
+    background-color: $light-grey;
+    font-size: 18px !important;
+    font-weight: bold;
+    -webkit-box-shadow: 0 0 3px 1px $black-30-opacity;
+    box-shadow: 0 0 3px 1px $black-30-opacity;
+    &.details {
+        box-shadow: unset;
+        border: 1px solid darkgrey;
+    }
+}
+
+.single-item-box-shadow {
+    -webkit-box-shadow: 0 0 2px 0 $black-20-opacity;
+    box-shadow: 0 0 2px 0 $black-20-opacity;
+}
+
+.box-background {
+    background-color: $light-grey;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
