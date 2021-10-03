@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-members',
-  templateUrl: './members.component.html',
-  styles: []
+    selector: 'app-members',
+    templateUrl: './members.component.html',
+    styles: []
 })
 export class MembersComponent implements OnInit {
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+        //TODO login form in modal
+    }
 
 }
