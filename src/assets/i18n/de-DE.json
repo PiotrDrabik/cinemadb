@@ -10,19 +10,45 @@
         }
     },
     "global": {
-
+        "premiere": "Premiere"
     },
     "error": {
         "response": "Leider keine Ergebnisse gefunden.",
         "404": "404-Fehler, Seite nicht gefunden."
     },
     "home": {
-        "premiere": "Premiere"
+        "discover": "Entdecken Sie die kommende Filmpremiere"
+    },
+    "people": {
+        "header": "Top-Schauspieler im Showbusiness."
+    },
+    "movies": {
+        "header": "Filme - jetzt im Trend."
+    },
+    "series": {
+        "header": "TV-Serien - jetzt im Trend."
     },
     "paginator": {
         "items-per-page": "Produkte",
         "next-page": "Nächste Seite",
         "previous-page": "Vorherige Seite",
         "of": "von"
+    },
+    "details": {
+        "webpage": "Website",
+        "place-birth": "Geburtsort",
+        "date-birth": "Geburtsdatum",
+        "date-death": "Sterbedatum",
+        "more": "Mehr",
+        "cast": "Werfen",
+        "video": "Video",
+        "rating": "Bewertung",
+        "genres": "Genres",
+        "tagline": "Slogan",
+        "budget": "Budget",
+        "revenue": "Einnahmen",
+        "episodes": "Folgen",
+        "seasons": "Jahreszeiten",
+        "networks": "Anschauen"
     }
 }

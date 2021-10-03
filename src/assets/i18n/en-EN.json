@@ -10,20 +10,46 @@
         }
     },
     "global": {
-
+        "premiere": "Premiere"
     },
     "error": {
         "response": "Sorry, no results found.",
         "404": "404 error, page not found."
     },
     "home": {
-        "premiere": "Premiere"
+        "discover": "Discover upcoming movies premiere"
+    },
+    "people": {
+        "header": "Show business top actors."
+    },
+    "movies": {
+        "header": "Movies - trending now."
+    },
+    "series": {
+        "header": "TV series - trending now."
     },
     "paginator": {
         "items-per-page": "Items per page",
         "next-page": "Next page",
         "previous-page": "Previous page",
         "of": "of"
+    },
+    "details": {
+        "webpage": "Webpage",
+        "place-birth": "Place of birth",
+        "date-birth": "Date of birth",
+        "date-death": "Date of death",
+        "more": "More",
+        "cast": "Cast",
+        "video": "Video",
+        "rating": "Rating",
+        "genres": "Genres",
+        "tagline": "Tagline",
+        "budget": "Budget",
+        "revenue": "Revenue",
+        "episodes": "Episodes",
+        "seasons": "Seasons",
+        "networks": "Networks"
     }
 }
 

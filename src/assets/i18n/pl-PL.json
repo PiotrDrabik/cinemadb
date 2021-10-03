@@ -10,19 +10,45 @@
         }
     },
     "global": {
-
+        "premiere": "Premiera"
     },
     "error": {
         "response": "Przepraszamy, nie znaleziono żadnego wyniku.",
         "404": "Błąd 404, strona nie została znaleziona."
     },
     "home": {
-        "premiere": "Premiera"
+        "discover": "Odkryj nadchodzące premiery filmowe"
+    },
+    "people": {
+        "header": "Aktualny top w showbiznesie."
+    },
+    "movies": {
+        "header": "Aktualny TOP produkcji filmowych."
+    },
+    "series": {
+        "header": "Aktualny TOP produkcji telewizyjnych."
     },
     "paginator": {
         "items-per-page": "Pozycji",
         "next-page": "Następna",
         "previous-page": "Poprzednia",
         "of": "z"
+    },
+    "details": {
+        "webpage": "Strona internetowa",
+        "place-birth": "Miejsce urodzenia",
+        "date-birth": "Data urodzenia",
+        "date-death": "Data zgonu",
+        "more": "Więcej",
+        "cast": "Obsada",
+        "video": "Wideo",
+        "rating": "Ocena",
+        "genres": "Gatunki",
+        "tagline": "Hasło przewodnie",
+        "budget": "Budżet",
+        "revenue": "Dochód",
+        "episodes": "Odcinki",
+        "seasons": "Sezony",
+        "networks": "Platformy"
     }
 }

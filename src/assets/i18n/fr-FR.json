@@ -10,19 +10,45 @@
         }
     },
     "global": {
-
+        "premiere": "Première"
     },
     "error": {
         "response": "Désolé, pas trouvé de résultats.",
         "404": "Erreur 404, page introuvable."
     },
     "home": {
-        "premiere": "Première"
+        "discover": "Découvrez les films à venir en avant-première"
+    },
+    "people": {
+        "header": "Actuellement au top dans le show business."
+    },
+    "movies": {
+        "header": "Films - tendance maintenant."
+    },
+    "series": {
+        "header": "Séries télévisées - tendance maintenant."
     },
     "paginator": {
         "items-per-page": "Éléments",
         "next-page": "Page suivante",
         "previous-page": "Page précédente",
         "of": "sur"
+    },
+    "details": {
+        "webpage": "WWW",
+        "place-birth": "Lieu de naissance",
+        "date-birth": "Date de naissance",
+        "date-death": "Date de décès",
+        "more": "Suite",
+        "cast": "Jeter",
+        "video": "Vidéo",
+        "rating": "Évaluation",
+        "genres": "Genres",
+        "tagline": "Slogan",
+        "budget": "Budget",
+        "revenue": "Revenu",
+        "episodes": "Épisodes",
+        "seasons": "Saisons",
+        "networks": "Réseaux"
     }
 }
