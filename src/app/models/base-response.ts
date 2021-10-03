@@ -4,6 +4,7 @@ export interface BaseRes {
     first_air_date?: string
     release_date?: string
     genre_ids?: number[]
+    gender?: number
     id: number
     media_type: string
     name?: string
@@ -18,4 +19,9 @@ export interface BaseRes {
     profile_path?: string
     vote_average?: number
     vote_count?: number
+}
+
+export interface BaseWrapper {
+    total_results: number
+    results: BaseRes[]
 }
