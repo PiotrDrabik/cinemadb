@@ -1,0 +1,30 @@
+@import '../../styles/colors.scss';
+
+.flag {
+    box-shadow: 4px 4px 4px #cccccc;
+    width: 30px;
+    border: solid 1px #eeeeee;
+}
+
+.dropdown-item {
+    cursor: pointer;
+}
+
+.active-flag {
+    width: 20px;
+}
+
+.bg-nav {
+    background-color: $nav-color;
+}
+
+.nav-item > a.nav-link {
+    color: white;
+    &.active {
+        font-weight: bold;
+    }
+}
+
+.ng-touched.ng-invalid {
+    border-color: #dc3545;
+}
