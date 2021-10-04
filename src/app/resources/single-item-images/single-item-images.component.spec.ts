@@ -4,6 +4,7 @@ import { SingleItemImagesComponent } from './single-item-images.component';
 import { BaseRes } from "../../models/base-response";
 import { TranslateModule } from "@ngx-translate/core";
 import { StringCutPipe } from "../pipe/string-cut.pipe";
+import {DateCustomPipe} from "../pipe/date-custom.pipe";
 
 describe('SingleItemImagesComponent', () => {
     let component: SingleItemImagesComponent;
@@ -11,7 +12,7 @@ describe('SingleItemImagesComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [ SingleItemImagesComponent, StringCutPipe ],
+            declarations: [ SingleItemImagesComponent, StringCutPipe, DateCustomPipe ],
             imports: [ TranslateModule.forRoot() ],
             providers: []
         })

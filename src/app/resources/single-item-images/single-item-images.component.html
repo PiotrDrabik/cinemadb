@@ -1,5 +1,5 @@
-<ng-container *ngIf="item">
-    <div class="title h4">
+<ng-container>
+    <div class="title cursor-pointer h4" [routerLink]="['/details/'+item.id, {type: (item.media_type || item.gender)}]">
         <div class="py-2">{{item.name || item.title || item.original_name}}</div>
     </div>
 
@@ -59,6 +59,6 @@
          class="pb-4 date-box"
          [ngClass]="!item.poster_path ? 'extra-top-space' : ''">
         <i class="far fa-calendar-alt pe-2"></i>
-        <span>{{item.release_date || item.first_air_date | date:'yyyy'}}</span>
+        <span>{{ (item.release_date || item.first_air_date) | dateCustom }}</span>
     </div>
 </ng-container>
