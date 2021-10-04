@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from "rxjs";
 import { catchError } from "rxjs/operators";
 import { AlertHelperComponent } from "../resources/alert-helper/alert-helper.component";
 import { AppConfigService } from "./app-config.service";
 import { QueryUrlModel } from "../models/query-url-model";
-import {BaseRes} from "../models/base-response";
+import { BaseWrapper } from "../models/base-response";
+import { PersonResponseModel } from "../models/person-response-model";
+import { MediaResponseModel } from "../models/media-response-model";
 
 @Injectable({
     providedIn: 'root'
@@ -16,7 +18,7 @@ export class HttpService {
                 private alertHelper: AlertHelperComponent,
                 private app: AppConfigService) { }
 
-    getData(url: string): Observable<{'results': BaseRes[]} | object> {
+    getData(url: string): Observable< BaseWrapper | PersonResponseModel | MediaResponseModel | object > {
         return this.http.get(url)
             .pipe(
                 catchError(this.handleError.bind(this))

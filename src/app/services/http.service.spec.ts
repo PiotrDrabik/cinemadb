@@ -40,4 +40,24 @@ describe('HttpService', () => {
         expect(result).toContain(exampleQuery.baseAction);
         expect(result).toContain(String(exampleQuery.page));
     });
+
+    it('test generateUrl(), should return string that contains all provided values', () => {
+        let exampleQuery: QueryUrlModel = {
+            append: 'append=video',
+            language: languages.DE,
+            mediaType: "tv/day",
+            page: 2,
+            query: "bond",
+            baseAction: "trending"
+        }
+        let result = service.generateUrl(exampleQuery);
+        expect(typeof result).toEqual('string');
+        expect(result).toContain('https://');
+        expect(result).toContain(String(exampleQuery.append));
+        expect(result).toContain(exampleQuery.language);
+        expect(result).toContain(exampleQuery.mediaType);
+        expect(result).toContain(exampleQuery.query!);
+        expect(result).toContain(exampleQuery.baseAction);
+        expect(result).toContain(String(exampleQuery.page));
+    });
 });
