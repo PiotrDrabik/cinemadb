@@ -1,0 +1,104 @@
+<ng-container>
+    <div class="container pt-4 pb-2 box-background">
+        <div class="card mb-3">
+            <div class="row">
+                <div class="col-md-4" *ngIf="item.poster_path">
+                    <img src="{{app.hostImage}}{{app.QUALITY_IMAGE.STANDARD}}{{item.poster_path}}"
+                         class="img-fluid rounded-start"
+                         alt="{{item.title || item.original_title}}">
+                    <img *ngIf="item.backdrop_path"
+                         src="{{app.hostImage}}{{app.QUALITY_IMAGE.STANDARD}}{{item.backdrop_path}}"
+                         class="img-fluid rounded-start pt-2"
+                         alt="{{item.title || item.original_title}}">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="subpage-header details p-2">{{item.title || item.original_title || item.name}}</h5>
+                        <p class="card-text mt-4">{{item.overview}}</p>
+                        <p class="card-text" *ngIf="item.release_date || item.runtime || item.first_air_date">
+                            <strong>{{'global.premiere' | translate}}</strong> {{item.release_date || item.runtime || item.first_air_date}}
+                        </p>
+                        <p id="details-revenue" class="card-text" *ngIf="item.revenue">
+                            <strong>{{ 'details.revenue' | translate }}</strong> {{item.revenue | currency:'USD'}}</p>
+                        <p id="details-budget" class="card-text" *ngIf="item.budget">
+                            <strong>{{ 'details.budget' | translate }}</strong> {{item.budget | currency:'USD'}}</p>
+                        <p id="details-tagline" class="card-text" *ngIf="item.tagline">
+                            <strong>{{ 'details.tagline' | translate }}</strong> {{item.tagline}}</p>
+                        <p id="details-genres" class="card-text" *ngIf="item.genres && item.genres.length">
+                            <strong>{{ 'details.genres' | translate }}</strong>
+                            <span>&nbsp;</span>
+                            <span *ngFor="let gen of item.genres; index as i">
+                                {{gen.name}}{{i == item.genres.length -1 ? '' : ', '}}
+                            </span>
+                        </p>
+                        <p id="details-rating" class="card-text" *ngIf="item.vote_average">
+                            <strong>{{ 'details.rating' | translate }}</strong> {{item.vote_average}}/10</p>
+                        <p class="card-text" *ngIf="item.homepage">
+                            <span><strong>{{'details.webpage' | translate}}</strong></span>
+                            <span class="ps-2">
+                                <a href="{{item.homepage}}" target="_blank">{{item.homepage}}</a>
+                            </span>
+                        </p>
+                        <p class="card-text" *ngIf="item.imdb_id">
+                            <img src="assets/imdb-logo.png" width="80px">
+                            <span class="ps-2">
+                                <a href="https://www.imdb.com/name/{{item.imdb_id}}"
+                                   target="_blank">{{app.hostImdb}}{{item.imdb_id}}
+                                </a>
+                            </span>
+                        </p>
+                        <p class="card-text" *ngIf="item.networks">
+                            <span class="pe-2"><strong>{{ 'details.networks' | translate }}</strong></span>
+                            <ng-container *ngFor="let net of item.networks">
+                                <img *ngIf="net.logo_path else description"
+                                     src="{{app.hostImage}}{{app.QUALITY_IMAGE.STANDARD}}{{net.logo_path}}"
+                                     title="{{net.name}}"
+                                     height="20px">
+                                <ng-template #description>
+                                    <span>{{net.name}}</span>
+                                </ng-template>
+                            </ng-container>
+                        </p>
+                        <p id="details-episodes" class="card-text" *ngIf="item.number_of_episodes">
+                            <strong>{{ 'details.episodes' | translate }}</strong> {{item.number_of_episodes}}</p>
+                        <p id="details-seasons" class="card-text" *ngIf="item.number_of_seasons">
+                            <strong>{{ 'details.seasons' | translate }}</strong> {{item.number_of_seasons}}</p>
+                        <ng-container *ngIf="item.videos.results && item.videos.results.length">
+                            <p class="card-text">
+                                <strong>{{ 'details.video' | translate }}</strong>
+                            </p>
+                            <div class="row">
+                                <div class="col">
+                                    <iframe id="ytplayer" type="text/html" width="100%" height="360"
+                                            [src]="getSanitizedUrl(item.videos.results[0].key)">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </ng-container>
+                        <p class="card-text pt-2">
+                            <strong>{{ 'details.cast' | translate }}</strong>
+                        </p>
+                        <div class="row">
+                            <ng-container *ngFor="let item of item.credits.cast; let i = index">
+                                <div class="col" *ngIf="item.profile_path">
+                                    <div class="card my-1" *ngIf="i < castVisible">
+                                        <img src="{{app.hostImage}}{{app.QUALITY_IMAGE.STANDARD}}{{item.profile_path}}"
+                                             class="card-img-top card-person-image-small" alt="{{item.name}}">
+                                        <div class="card-body">
+                                            <p class="card-text cursor-pointer" [routerLink]="['/details/'+item.id, {type: 'person'}]">
+                                                {{item.name}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col align-self-center" *ngIf="i === castVisible + 1">
+                                    <button (click)="showMoreCast()" class="btn btn-info">{{ 'details.more' | translate }}</button>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>

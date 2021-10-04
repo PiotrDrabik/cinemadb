@@ -1,0 +1,35 @@
+<ng-container>
+    <div class="container pt-4 pb-2 box-background">
+        <div class="card mb-3">
+            <div class="row">
+                <div class="col-md-4" *ngIf="item.profile_path">
+                    <img src="{{app.hostImage}}{{app.QUALITY_IMAGE.STANDARD}}{{item.profile_path}}"
+                         class="img-fluid rounded-start" alt="{{item.name}}">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="subpage-header details p-2">{{item.name}}</h5>
+                        <p class="card-text mt-4">{{item.biography}}</p>
+                        <p class="card-text" *ngIf="item.place_of_birth">{{'details.place-birth' | translate}} {{item.place_of_birth}}</p>
+                        <p class="card-text" *ngIf="item.birthday">{{'details.date-birth' | translate}} {{item.birthday}}</p>
+                        <p class="card-text" *ngIf="item.deathday">{{'details.date-death' | translate}} {{item.deathday}}</p>
+                        <p class="card-text" *ngIf="item.homepage">
+                            <span>{{'details.webpage' | translate}}</span>
+                            <span class="ps-2">
+                                <a href="{{item.homepage}}" target="_blank">{{item.homepage}}</a>
+                            </span>
+                        </p>
+                        <p class="card-text">
+                            <img src="assets/imdb-logo.png" width="80px">
+                            <span class="ps-2" *ngIf="item.imdb_id">
+                                <a href="https://www.imdb.com/name/{{item.imdb_id}}"
+                                   target="_blank">https://www.imdb.com/name/{{item.imdb_id}}
+                                </a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
