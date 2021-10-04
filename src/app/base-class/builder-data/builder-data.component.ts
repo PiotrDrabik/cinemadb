@@ -14,7 +14,7 @@ import { MediaResponseModel } from "../../models/media-response-model";
 @Component({
     selector: 'app-builder-data',
     template: '',
-    styles: ['']
+    styles: []
 })
 export class BuilderDataComponent {
     public refreshSub: Subscription;
