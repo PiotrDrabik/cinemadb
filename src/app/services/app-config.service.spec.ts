@@ -54,6 +54,16 @@ describe('AppConfigService', () => {
         expect(service.hostImage).not.toEqual('');
     });
 
+    it('hostImdb should be a string and not be empty', () => {
+        expect(typeof service.hostImdb).toEqual('string');
+        expect(service.hostImdb).not.toEqual('');
+    });
+
+    it('hostYoutube should be a string and not be empty', () => {
+        expect(typeof service.hostYoutube).toEqual('string');
+        expect(service.hostYoutube).not.toEqual('');
+    });
+
     it('QUALITY_IMAGE should have at least 2 types', () => {
         expect(typeof service.QUALITY_IMAGE).toEqual('object');
         expect(Object.keys(service.QUALITY_IMAGE)).toContain('ORIGINAL');
