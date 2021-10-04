@@ -27,6 +27,9 @@ describe('Tests AppStateService', () => {
         };
         service.home = [ baseResHome, baseResHome ];
         service.search = [ baseResSearch ];
+        service.series = [ baseResHome ];
+        service.movies = [ baseResHome ];
+        service.discover = [ baseResHome ];
     });
 
     it('should be created', () => {
@@ -51,5 +54,20 @@ describe('Tests AppStateService', () => {
     it('should have first element object with field "media_type"', () => {
         expect(service.search[0]).toBeDefined();
         expect(service.search[0].media_type).toEqual('tv');
+    });
+
+    it('should be defined and should have variable "series" type Array', () => {
+        expect(service.series).toBeDefined();
+        expect(Array.isArray(service.series)).toBeTruthy();
+    });
+
+    it('should be defined and should have variable "movies" type Array', () => {
+        expect(service.movies).toBeDefined();
+        expect(Array.isArray(service.movies)).toBeTruthy();
+    });
+
+    it('should be defined and should have variable "discover" type Array', () => {
+        expect(service.discover).toBeDefined();
+        expect(Array.isArray(service.discover)).toBeTruthy();
     });
 });
