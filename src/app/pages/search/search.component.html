@@ -1,0 +1,22 @@
+<div class="container color-bg pt-4"
+     *ngIf="state.search && state.search.length > 0; else noResults">
+    <mat-paginator #paginator
+                   class="paging"
+                   [length]="length"
+                   [pageSize]="pageSize"
+                   (page)="pageEvent = pageChange($event)"
+                   aria-label="Select page">
+    </mat-paginator>
+    <div class="row pt-2">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 single-item-box-shadow" *ngFor="let item of state.search; index as i">
+            <app-single-item-images [item]="item"></app-single-item-images>
+        </div>
+    </div>
+</div>
+
+<ng-template #noResults>
+    <app-response-error
+        *ngIf="state.search && state.search.length === 0"
+        errorMessageTranslationPath="error.response">
+    </app-response-error>
+</ng-template>
