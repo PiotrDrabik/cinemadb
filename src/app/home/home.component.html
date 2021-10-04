@@ -1,36 +1,66 @@
-<div id="carouselExampleSlidesOnly" class="carousel slide" style="width:30%" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item" [ngClass]="i == 0 ? 'active' : ''"  *ngFor="let item of state.home; index as i">
-            <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" class="d-block w-100" alt="...">
+<div class="w-100 m-0 py-3 bg-dark">
+    <div id="carouselMainHomeSlides" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button"
+                    data-bs-target="#carouselMainHomeSlides"
+                    class="bg-white"
+                    *ngFor="let item of state.home; index as i"
+                    attr.data-bs-slide-to="{{i}}" [ngClass]="i == 0 ? 'active' : ''"
+                    aria-current="true"
+                    aria-label="Slide 1"></button>
         </div>
-    </div>
-</div>
-<div id="carouselExampleDark" class="carousel carousel-dark slide" style="width:30%" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-        <button type="button"
-                data-bs-target="#carouselExampleDark"
-                *ngFor="let item of state.home; index as i"
-                attr.data-bs-slide-to="{{i}}" [ngClass]="i == 0 ? 'active' : ''"
-                aria-current="true"
-                aria-label="Slide 1"></button>
-    </div>
-    <div class="carousel-inner">
-        <div class="carousel-item" data-bs-interval="1000" [ngClass]="i == 0 ? 'active' : ''"  *ngFor="let item of state.home; index as i">
-            <img src="https://image.tmdb.org/t/p/original/{{item.poster_path}}" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
+        <div class="carousel-inner">
+            <div class="carousel-item"
+                 data-bs-interval="5000"
+                 [ngClass]="i == 0 ? 'active' : ''"
+                 *ngFor="let item of state.home; index as i">
+                <div class="row">
+                    <div class="col-md-3 px-5 text-center">
+                        <img src="{{app.hostImage}}{{app.QUALITY_IMAGE.STANDARD}}{{item.poster_path}}"
+                             class="d-block w-100"
+                             loading="lazy"
+                             alt="{{item.name || item.title || item.original_name}}">
+                        <div class="text-light cursor-pointer h3 py-4"
+                             [routerLink]="['/details/'+item.id, {type: (item.media_type || item.gender)}]">
+                            {{item.name || item.title || item.original_name}}
+                        </div>
+                        <div class="d-inline-block date-box text-light p-3">
+                            <div class="d-inline-block">
+                                <i class="fas fa-fire-alt py-2 px-1 fa-2x text-danger"></i>
+                            </div>
+                            <div class="d-inline-block ps-2">
+                                <div>{{'global.premiere' | translate}}</div>
+                                <div><strong>{{item.release_date || item.first_air_date}}</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9 pt-3 pt-md-0 px-5">
+                        <img src="{{app.hostImage}}{{app.QUALITY_IMAGE.ORIGINAL}}{{item.backdrop_path}}"
+                             class="d-block w-100 pb-3"
+                             alt="{{item.name || item.title || item.original_name}}">
+                        <p class="text-light m-2 p-3 carousel-bg-description">{{item.overview}}</p>
+                    </div>
+                </div>
             </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMainHomeSlides" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon carousel-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselMainHomeSlides" data-bs-slide="next">
+            <span class="carousel-control-next-icon carousel-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
 </div>
-
-<div (click)="ngOnInit()">test GET request</div>
+<div class="container-fluid pt-4 box-background">
+    <div class="subpage-header p-3 mx-1 mb-3">{{'home.discover' | translate}}</div>
+    <div class="row px-3">
+        <ng-container *ngFor="let item of state.discover; index as i">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 single-item-box-shadow"
+                 *ngIf="item && (item.poster_path || item.profile_path || item.backdrop_path || item.media_type)">
+                <app-single-item-images [item]="item"></app-single-item-images>
+            </div>
+        </ng-container>
+    </div>
+</div>
