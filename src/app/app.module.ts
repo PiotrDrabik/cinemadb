@@ -15,6 +15,18 @@ import { MembersComponent } from './pages/members/members.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { AlertHelperComponent } from './resources/alert-helper/alert-helper.component';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { SingleItemImagesComponent } from './resources/single-item-images/single-item-images.component';
+import { SearchComponent } from './pages/search/search.component';
+import { StringCutPipe } from './resources/pipe/string-cut.pipe';
+import { ResponseErrorComponent } from './resources/response-error/response-error.component';
+import { CustomMatPaginatorIntlService } from './services/custom-mat-paginator-intl.service';
+import { MatPaginatorIntl } from "@angular/material/paginator";
+import { BuilderDataComponent } from './base-class/builder-data/builder-data.component';
+import { DateCustomPipe } from './resources/pipe/date-custom.pipe';
+import { DetailsComponent } from './pages/details/details.component';
+import { DetailsPersonComponent } from './resources/details-templates/details-person.component';
+import { DetailsMediaComponent } from "./resources/details-templates/details-media.component";
 
 @NgModule({
     declarations: [
@@ -26,7 +38,16 @@ import { AlertHelperComponent } from './resources/alert-helper/alert-helper.comp
         MembersComponent,
         HomeComponent,
         ErrorPageComponent,
-        AlertHelperComponent
+        AlertHelperComponent,
+        SingleItemImagesComponent,
+        SearchComponent,
+        StringCutPipe,
+        ResponseErrorComponent,
+        BuilderDataComponent,
+        DateCustomPipe,
+        DetailsComponent,
+        DetailsPersonComponent,
+        DetailsMediaComponent
     ],
     imports: [
         BrowserModule,
@@ -41,10 +62,16 @@ import { AlertHelperComponent } from './resources/alert-helper/alert-helper.comp
                 useFactory: HttpLoaderFactory,
                 deps: [HttpClient]
             }
-        })
+        }),
+        FormsModule,
+        ReactiveFormsModule
     ],
     providers: [
-        AlertHelperComponent
+        AlertHelperComponent,
+        {
+            provide: MatPaginatorIntl,
+            useClass: CustomMatPaginatorIntlService,
+        },
     ],
     bootstrap: [AppComponent]
 })
