@@ -8,6 +8,7 @@ import { AuthGuardService } from "./services/auth-guard.service";
 import { HomeComponent } from "./home/home.component";
 import { ErrorPageComponent } from "./pages/error-page/error-page.component";
 import { SearchComponent } from "./pages/search/search.component";
+import { DetailsComponent } from "./pages/details/details.component";
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
     { path: 'series', component: SeriesComponent },
     { path: 'members', component: MembersComponent, canActivate: [AuthGuardService] },
     { path: 'search/:param', component: SearchComponent },
+    { path: 'details/:param', component: DetailsComponent },
     { path: '404', component: ErrorPageComponent, data: {message: 'Page not found!'} },
     { path: '**', redirectTo: '/404' }
 ];
