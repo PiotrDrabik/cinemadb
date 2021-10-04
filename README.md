@@ -1,9 +1,56 @@
 # Cinemadb
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
+You can see working page at: [http://cinemadb.papol.pl](http://cinemadb.papol.pl)
+
+Code:
+- Angular 12
+- Bootstrap 5
+- ngx-translate: 4 language versions implemented via API + ngx-translate in JSON files
+- fontawesome 5
+- angular material + translation changes for pagination
+- unit tests
+- types
+- forms validation
+- API calls as abstraction class
+- Builder-data.component used as BaseClass for all repeatable functionalities
+
+Page details:
+- responsiveness
+- routing with guard
+- language selection
+
+main page 
+- TRENDING NOW carousel
+- upcoming movies premiere
+- links for the details page
+
+search results page
+- people and media results displayed
+- pagination
+- links for the details page
+
+details page
+- people or media
+- images,
+- youtube video embeded
+- cast listed with photos (and details link)
+
+series page
+- TRENDING NOW list
+- links for the details page
+
+people page
+- Show business top actors.
+- links for the details page
+
+members page
+- not available
+- calls guard to navigate to main
+
 
 ## Development server
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
